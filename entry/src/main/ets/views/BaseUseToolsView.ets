@@ -1,4 +1,5 @@
 import { BaseUseToolsClass } from "../model/BaseUseToolsClass"
+import { router } from "@kit.ArkUI"
 
 @Component
 export struct BaseUseToolItem{
@@ -17,6 +18,10 @@ export struct BaseUseToolItem{
           .maxLines(1)
           .fontWeight(400)
           .margin({ top: 4 })
+        Button('跳转页面')
+          .onClick(() => {
+            router.pushUrl({url: this.baseUseToolItem.url})
+          })
       }
       .height('100%')
       .layoutWeight(1)
