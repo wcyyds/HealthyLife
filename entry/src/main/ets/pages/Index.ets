@@ -60,5 +60,5 @@ export struct Index {
 }
 
 function Weatherpage() {
-  throw new Error('Function not implemented.');
+
 }

@@ -1,6 +1,8 @@
 {
   "src": [
     "pages/Index",
-    "subpage/TorchPage"
+    "subpage/TorchPage",
+    "subpage/SetPage",
+    "subpage/ClockPage"
   ]
 }

@@ -7,15 +7,15 @@
   },
   {
     "id" : "2",
-    "title" : "手电筒",
+    "title" : "基础设置",
     "image" : "",
-    "url" : ""
+    "url" : "subpage/SetPage"
   },
   {
     "id" : "3",
-    "title" : "手电筒",
+    "title" : "闹钟设置",
     "image" : "",
-    "url" : ""
+    "url" : "subpage/ClockPage"
   },
   {
     "id" : "4",
