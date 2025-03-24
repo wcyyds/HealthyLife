@@ -1,0 +1,72 @@
+[
+  {
+    "id" : "1",
+    "title" : "蓝牙",
+    "image" : "app.media.power_off",
+    "state" : "关闭蓝牙",
+    "url" : ""
+  },
+  {
+    "id" : "2",
+    "title" : "WiFi",
+    "image" : "app.media.power_on",
+    "state" : "关闭WiFi",
+    "url" : ""
+  },
+  {
+    "id" : "3",
+    "title" : "流量",
+    "image" : "",
+    "state" : "关闭流量",
+    "url" : "s"
+  },
+  {
+    "id" : "4",
+    "title" : "GPS",
+    "image" : "",
+    "state" : "关闭GPS",
+    "url" : ""
+  },
+  {
+    "id" : "5",
+    "title" : "手电筒",
+    "image" : "",
+    "state" : "",
+    "url" : ""
+  },
+  {
+    "id" : "6",
+    "title" : "手电筒",
+    "image" : "",
+    "state" : "",
+    "url" : ""
+  },
+  {
+    "id" : "7",
+    "title" : "手电7",
+    "image" : "",
+    "state" : "",
+    "url" : ""
+  },
+  {
+    "id" : "8",
+    "title" : "手电筒8",
+    "image" : "",
+    "state" : "",
+    "url" : ""
+  },
+  {
+    "id" : "9",
+    "title" : "手电筒9",
+    "image" : "",
+    "state" : "",
+    "url" : ""
+  },
+  {
+    "id" : "0",
+    "title" : "手电筒0",
+    "image" : "",
+    "state" : "",
+    "url" : ""
+  }
+]
