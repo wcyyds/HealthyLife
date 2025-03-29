@@ -1,5 +1,5 @@
-import { BaseSetClass } from "../model/BaseSetClass";
-import { bufferToString } from "../util/BufferUtil";
+import { BaseSetClass } from "../../model/BaseSetClass";
+import { bufferToString } from "../../util/BufferUtil";
 
 @Entry
 @Component

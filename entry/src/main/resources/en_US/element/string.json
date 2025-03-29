@@ -3,20 +3,26 @@
     {
       "name": "module_desc",
       "value": "module description"
-    },
-    {
+    }, {
       "name": "EntryAbility_desc",
       "value": "description"
-    },
-    {
+    }, {
       "name": "EntryAbility_label",
       "value": "label"
-    }
-  ,{
+    },{
       "name": "Weather_desc",
       "value": "description"
     },{
       "name": "Weather_label",
       "value": "label"
+    }, {
+      "name": "location_permission",
+      "value": "Allows an app to obtain location information when running in the foreground"
+    }, {
+      "name": "background_location_permission",
+      "value": "Allows apps to obtain location information while running in the background "
+    }, {
+      "name": "fuzzy_location_permission",
+      "value": "Allows apps to obtain obfuscated device location information"
     }]
 }

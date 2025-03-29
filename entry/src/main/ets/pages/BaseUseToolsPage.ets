@@ -1,6 +1,7 @@
 import { BaseUseToolsClass } from "../model/BaseUseToolsClass"
 import { bufferToString } from "../util/BufferUtil"
 import { BaseUseToolItem } from "../views/BaseUseToolsView"
+import { abilityAccessCtrl } from "@kit.AbilityKit"
 
 @Component
 export struct BaseUseToolsPage{

@@ -1,8 +1,9 @@
 {
   "src": [
     "pages/Index",
-    "subpage/TorchPage",
-    "subpage/SetPage",
-    "subpage/ClockPage"
+    "subpage/baseusetoolspages/TorchPage",
+    "subpage/baseusetoolspages/SetPage",
+    "subpage/baseusetoolspages/ClockPage",
+    "subpage/weatherpages/CityManage"
   ]
 }
