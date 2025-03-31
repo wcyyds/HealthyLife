@@ -1,6 +1,6 @@
-import { CommonConstants } from '../../constants/CommonConstants'
-import { AQICategory } from '../../model/CityModel'
-import OtherItem, { LifeItem, Warn } from '../../viewmodel/OtherItem'
+import { CommonConstants } from '../../../constants/CommonConstants'
+import { AQICategory } from '../../../model/weathermodel/CityModel'
+import OtherItem, { LifeItem, Warn } from '../../../model/weathermodel/OtherItem'
 import { LengthMetrics } from '@kit.ArkUI'
 import { DEFAULT } from '@ohos/hypium'
 
@@ -419,5 +419,4 @@ export function tipsBuilderAirQuality(otherItem: OtherItem){
       .fontWeight(CommonConstants.FONT_WEIGHT_500)
   }
   .borderRadius(10)
-
 }

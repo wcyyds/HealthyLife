@@ -1,8 +1,8 @@
 import { geoLocationManager } from '@kit.LocationKit';
 import { promptAction } from '@kit.ArkUI';
 import HttpGet from './HttpGet';
-import WeatherItem from '../viewmodel/WeatherItem';
-import City from '../viewmodel/City';
+import WeatherItem from '../model/weathermodel/WeatherItem';
+import City from '../model/weathermodel/City';
 
 
 class Location{
@@ -13,7 +13,6 @@ class Location{
     this.latitude = latitude;
     this.longitude = longitude;
   }
-
 }
 
 class LocationUtil {

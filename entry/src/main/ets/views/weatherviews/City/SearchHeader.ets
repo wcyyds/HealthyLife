@@ -1,7 +1,7 @@
 import promptAction from '@ohos.promptAction';
-import httpGet from '../../util/HttpGet';
-import City from '../../viewmodel/City';
-import WeatherItem from '../../viewmodel/WeatherItem';
+import httpGet from '../../../util/HttpGet';
+import City from '../../../model/weathermodel/City';
+import WeatherItem from '../../../model/weathermodel/WeatherItem';
 
 @Component
 export default struct SearchHeader {

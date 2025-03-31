@@ -1,6 +1,6 @@
-import { CommonConstants } from '../../constants/CommonConstants'
-import { AQICategory } from '../../model/CityModel';
-import OtherItem from '../../viewmodel/OtherItem';
+import { CommonConstants } from '../../../constants/CommonConstants'
+import { AQICategory } from '../../../model/weathermodel/CityModel';
+import OtherItem from '../../../model/weathermodel/OtherItem';
 import { tipsBuilderAirQuality } from './Tips';
 
 @Component
@@ -72,8 +72,6 @@ export default struct CustomSliders {
             .selectedColor('#ffbeffcd')
         }
       }
-
-      
     }
     .backgroundColor($r('app.color.card_background'))
     .borderRadius(10)

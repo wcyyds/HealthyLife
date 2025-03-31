@@ -1,19 +1,17 @@
 import http from '@ohos.net.http';
-import City from '../viewmodel/City';
-import WeatherItem from '../viewmodel/WeatherItem';
+import City from '../model/weathermodel/City';
+import WeatherItem from '../model/weathermodel/WeatherItem';
 
 
 interface CityApiResponse {
   location: Array<City<WeatherItem>>;
 }
 
-
 class HttpGet {
   private searchCityUrl: string = 'https://geoapi.qweather.com/v2/city/lookup';
   private searchIdUrl: string = 'https://devapi.qweather.com/v7/';
   private key: string = '372e109fc39045e48da2aa80d01a9dea';
   data:string = ""
-
 
   async searchCity(cityName: string): Promise<City<WeatherItem>[]> {
     let httpRequest = http.createHttp();
@@ -28,8 +26,6 @@ class HttpGet {
           },
         }
       );
-      console.log('wcy 网络：城市搜索成功', JSON.stringify(response.result.toString()));
-
       if (response.responseCode === 200) {
         let responseData = JSON.parse(response.result.toString()) as CityApiResponse;
         console.log('网络：城市搜索成功', JSON.stringify(responseData));

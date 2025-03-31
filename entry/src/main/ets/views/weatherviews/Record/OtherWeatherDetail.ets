@@ -1,7 +1,7 @@
 //一些其他的天气指数
-import { CommonConstants } from '../../constants/CommonConstants'
-import City from '../../viewmodel/City'
-import WeatherItem from '../../viewmodel/WeatherItem'
+import { CommonConstants } from '../../../constants/CommonConstants'
+import City from '../../../model/weathermodel/City'
+import WeatherItem from '../../../model/weathermodel/WeatherItem'
 
 @Component
 export default struct OtherWeatherDetail{
@@ -70,6 +70,5 @@ export default struct OtherWeatherDetail{
     .backgroundColor($r('app.color.card_background'))
     .borderRadius(10)
     .padding(20)
-
   }
 }

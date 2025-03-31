@@ -1,5 +1,5 @@
-import OtherItem,{LifeItem} from '../../viewmodel/OtherItem'
-import { CommonConstants } from '../../constants/CommonConstants'
+import OtherItem,{LifeItem} from '../../../model/weathermodel/OtherItem'
+import { CommonConstants } from '../../../constants/CommonConstants'
 import { lifeCard } from './Tips'
 
 @Component
@@ -125,6 +125,4 @@ export default struct LifeAdvice {
     }
     .padding(10)
   }
-
-
 }

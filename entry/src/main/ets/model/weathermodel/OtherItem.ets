@@ -17,10 +17,7 @@ export default class OtherItem{
     this.daily = daily
     this.refer = refer
   }
-
-
 }
-
 
 class Refer{
   sources?: string[]
@@ -30,7 +27,6 @@ class Refer{
     this.sources = sources
     this.license = license
   }
-
 }
 
 export class LifeItem{

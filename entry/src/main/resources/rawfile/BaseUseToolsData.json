@@ -3,59 +3,59 @@
     "id" : "1",
     "title" : "手电筒",
     "image" : "",
-    "url" : "subpage/TorchPage"
+    "url" : "subpage/baseusetoolspages/TorchPage"
   },
   {
     "id" : "2",
     "title" : "基础设置",
     "image" : "",
-    "url" : "subpage/SetPage"
+    "url" : "subpage/baseusetoolspages/SetPage"
   },
   {
     "id" : "3",
     "title" : "闹钟设置",
     "image" : "",
-    "url" : "subpage/ClockPage"
+    "url" : "subpage/baseusetoolspages/ClockPage"
   },
   {
     "id" : "4",
-    "title" : "手电筒",
+    "title" : "计步功能",
     "image" : "",
     "url" : ""
   },
   {
     "id" : "5",
-    "title" : "手电筒",
+    "title" : "吃药提醒",
     "image" : "",
     "url" : ""
   },
   {
     "id" : "6",
-    "title" : "手电筒",
+    "title" : "待定",
     "image" : "",
     "url" : ""
   },
   {
     "id" : "7",
-    "title" : "手电7",
+    "title" : "待定",
     "image" : "",
     "url" : ""
   },
   {
     "id" : "8",
-    "title" : "手电筒8",
+    "title" : "待定",
     "image" : "",
     "url" : ""
   },
   {
     "id" : "9",
-    "title" : "手电筒9",
+    "title" : "待定",
     "image" : "",
     "url" : ""
   },
   {
     "id" : "0",
-    "title" : "手电筒0",
+    "title" : "待定",
     "image" : "",
     "url" : ""
   }

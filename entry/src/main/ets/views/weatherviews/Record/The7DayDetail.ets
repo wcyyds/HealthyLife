@@ -1,6 +1,6 @@
-import { CommonConstants } from '../../constants/CommonConstants'
-import DayWeather from '../../viewmodel/DayWeather'
-import WeatherItem from '../../viewmodel/WeatherItem'
+import { CommonConstants } from '../../../constants/CommonConstants'
+import DayWeather from '../../../model/weathermodel/DayWeather'
+import WeatherItem from '../../../model/weathermodel/WeatherItem'
 
 //格式化时间
 function formatDate(dateString: string): string {

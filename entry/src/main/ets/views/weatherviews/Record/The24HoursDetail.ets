@@ -1,7 +1,7 @@
-import City from '../../viewmodel/City'
-import HourWeather from '../../viewmodel/HourWeather'
-import WeatherItem from '../../viewmodel/WeatherItem'
-import { CommonConstants } from '../../constants/CommonConstants'
+import City from '../../../model/weathermodel/City'
+import HourWeather from '../../../model/weathermodel/HourWeather'
+import WeatherItem from '../../../model/weathermodel/WeatherItem'
+import { CommonConstants } from '../../../constants/CommonConstants'
 
 function extractTime(dateTimeString: string): string {
   const regex = /T(\d{2}:\d{2})/;
@@ -9,13 +9,11 @@ function extractTime(dateTimeString: string): string {
   return match ? match[1] : '';
 }
 
-
 @Component
 export default struct The24HoursDetail {
   @Prop HourWeather:WeatherItem
   @State isShow:boolean = false
   @State hourSelectIndex: number = 0;
-
 
   private settings: RenderingContextSettings = new RenderingContextSettings(true)
   private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
@@ -62,7 +60,6 @@ export default struct The24HoursDetail {
       enableOutsideInteractive: false,
       dragBar: true
     })
-
   }
 
   @Builder myBuilder(){
@@ -115,7 +112,6 @@ export default struct The24HoursDetail {
       .scrollable(ScrollDirection.Horizontal)
       .scrollBar(BarState.Off)
 
-
       // 小时的具体信息
       Grid() {
         if( this.HourWeather.hourly){
@@ -146,7 +142,6 @@ export default struct The24HoursDetail {
       .columnsTemplate('1fr 1fr 1fr')
       .rowsTemplate('1fr')
       .padding({ top: 5 })
-
     }
     .width('100%')
     .height('100%')
@@ -227,14 +222,11 @@ interface GeneratedObjectLiteralInterface_1 {
   bottom: number;
 }
 
-
-
 @Component
 struct The24HoursWeather{
   private settings: RenderingContextSettings = new RenderingContextSettings(true)
   private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
   @Prop HourWeather: WeatherItem
-
 
   build() {
     Column() {
@@ -286,8 +278,6 @@ struct The24HoursWeather{
       }
       .listDirection(Axis.Horizontal)
       .padding({ top: 16, bottom: 16 })
-
-
     }
     .padding(16)
     .backgroundColor('#F1F3F5')
@@ -353,5 +343,4 @@ struct The24HoursWeather{
       this.context.fillText(`${item.fxTime ? extractTime(item.fxTime) : ''}`, x, height - 5)
     })
   }
-
 }

@@ -6,16 +6,16 @@ import { loginComponentManager } from "@kit.AccountKit";
 import { media } from "@kit.MediaKit";
 import { audio } from "@kit.AudioKit";
 import LocationUtil from "../util/LocationUtil";
-import WeatherItem from "../viewmodel/WeatherItem";
-import City from "../viewmodel/City";
+import WeatherItem from "../model/weathermodel/WeatherItem";
+import City from "../model/weathermodel/City";
 import PreferenceUtil from "../util/PreferenceUtil";
 import { CommonConstants } from "../constants/CommonConstants";
 import HttpGet from "../util/HttpGet";
 import BackgroundUtil from "../util/BackgroundUtil";
-import { CityWeather } from "../views/Record/CityWeather";
-import TopNavBar from "../views/Record/TopNavBar";
+import { CityWeather } from "../views/weatherviews/Record/CityWeather";
+import TopNavBar from "../views/weatherviews/Record/TopNavBar";
 
-@Entry
+@Entry({routeName: 'WeatherPage'})
 @Component
 export struct WeatherPage {
   @Watch('updateBackground')

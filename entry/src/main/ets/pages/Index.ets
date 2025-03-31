@@ -8,6 +8,7 @@ export struct Index {
   @State currentIndex: number = 0;
   private tabsController: TabsController = new TabsController();
 
+
   @Builder
   tabBarBuilder(title: string, targetIndex: number, selectedIcon: Resource, unselectIcon: Resource) {
     Column() {
@@ -57,8 +58,4 @@ export struct Index {
     .scrollable(false)
     .backgroundColor('#F1F3F5')
   }
-}
-
-function Weatherpage() {
-
 }

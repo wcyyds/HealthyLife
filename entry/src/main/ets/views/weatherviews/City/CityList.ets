@@ -1,9 +1,9 @@
-import City from '../../viewmodel/City'
-import WeatherItem from '../../viewmodel/WeatherItem'
+import City from '../../../model/weathermodel/City'
+import WeatherItem from '../../../model/weathermodel/WeatherItem'
 import { router } from '@kit.ArkUI'
-import { CommonConstants } from '../../constants/CommonConstants'
-import PreferenceUtil from '../../util/PreferenceUtil'
-import HttpGet from '../../util/HttpGet'
+import { CommonConstants } from '../../../constants/CommonConstants'
+import PreferenceUtil from '../../../util/PreferenceUtil'
+import HttpGet from '../../../util/HttpGet'
 
 @Component
 export struct CityList {
@@ -12,12 +12,10 @@ export struct CityList {
   @StorageLink('cities') cities: City<WeatherItem>[] = []
   @State isJudge: boolean = false
 
-
   async aboutToAppear(): Promise<void> {
     this.isJudge = false
     await this.loadCities()
   }
-
 
   build() {
     if( this.isJudge){

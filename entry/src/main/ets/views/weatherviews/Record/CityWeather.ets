@@ -1,15 +1,15 @@
-import { CommonConstants } from '../../constants/CommonConstants'
-import City from '../../viewmodel/City'
-import OtherItem from '../../viewmodel/OtherItem'
-import WeatherItem from '../../viewmodel/WeatherItem'
+import { CommonConstants } from '../../../constants/CommonConstants'
+import City from '../../../model/weathermodel/City'
+import OtherItem from '../../../model/weathermodel/OtherItem'
+import WeatherItem from '../../../model/weathermodel/WeatherItem'
 import LifeAdvice from './LifeAdvice'
 import OtherWeatherDetail from './OtherWeatherDetail'
 import ProgressUsage from './ProgressUsage'
 import The7DayDetail from './The7DayDetail'
 import The24HoursDetail from './The24HoursDetail'
 import Tips from './Tips'
-import BackgroundUtil from '../../util/BackgroundUtil'
-import HttpGet from '../../util/HttpGet'
+import BackgroundUtil from '../../../util/BackgroundUtil'
+import HttpGet from '../../../util/HttpGet'
 
 @Component
 export struct CityWeather {
@@ -17,7 +17,6 @@ export struct CityWeather {
   @StorageLink('currentCityIndex') currentCityIndex:number = 0
   @StorageLink('cities') cities:City<WeatherItem>[] = []
   @Link myBackgroundImage: Resource
-
 
   updateBackground() {
     if (this.currentCityIndex && this.cities.length > 0 && this.cities[this.currentCityIndex].detail) {
@@ -35,7 +34,6 @@ export struct CityWeather {
         .width('100%')
         .height('100%')
       })
-
     }
     .width('100%')
     .index(this.currentCityIndex)
@@ -61,7 +59,6 @@ struct CityWeatherContent {
   @State lifeAdvice:OtherItem = new OtherItem()
   @State otherItem:OtherItem = new OtherItem()
   @State isShow:boolean = false
-
 
   async aboutToAppear(): Promise<void> {
     this.city = this.cities[this.index]

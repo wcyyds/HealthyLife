@@ -19,8 +19,6 @@ export default class WeatherItem{
     this.daily = daily
     this.refer = refer
   }
-
-
 }
 
 export class WeatherDetail{
@@ -69,5 +67,4 @@ class Refer{
     this.sources = sources
     this.license = license
   }
-
 }

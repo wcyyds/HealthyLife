@@ -1,7 +1,7 @@
-import City from '../../viewmodel/City'
-import WeatherItem from '../../viewmodel/WeatherItem'
-import CityHeader from '../../views/City/CityHeader'
-import { CityList } from '../../views/City/CityList'
+import City from '../../model/weathermodel/City'
+import WeatherItem from '../../model/weathermodel/WeatherItem'
+import CityHeader from '../../views/weatherviews/City/CityHeader'
+import { CityList } from '../../views/weatherviews/City/CityList'
 
 @Entry
 @Component
@@ -25,7 +25,6 @@ struct CityManage {
       else{
         Text('加载中Manage')
       }
-
     }
     .width('100%')
     .height('100%')

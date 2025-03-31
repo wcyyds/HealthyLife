@@ -1,12 +1,10 @@
 import { router } from '@kit.ArkUI'
-import City from '../../viewmodel/City'
+import City from '../../../model/weathermodel/City'
 import SearchHeader from './SearchHeader'
 import { preferences } from '@kit.ArkData'
-import WeatherItem from '../../viewmodel/WeatherItem'
-import { CommonConstants } from '../../constants/CommonConstants'
-import PreferenceUtil from '../../util/PreferenceUtil'
-
-//import WeatherApi from '../../api/WeatherApi' // 假设这是您的天气API服务
+import WeatherItem from '../../../model/weathermodel/WeatherItem'
+import { CommonConstants } from '../../../constants/CommonConstants'
+import PreferenceUtil from '../../../util/PreferenceUtil'
 
 @Component
 export default struct CityHeader {

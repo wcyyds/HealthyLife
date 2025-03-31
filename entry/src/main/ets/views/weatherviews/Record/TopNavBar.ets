@@ -1,7 +1,7 @@
 import router from '@ohos.router'
-import { CommonConstants } from '../../constants/CommonConstants'
-import City from '../../viewmodel/City'
-import WeatherItem from '../../viewmodel/WeatherItem'
+import { CommonConstants } from '../../../constants/CommonConstants'
+import City from '../../../model/weathermodel/City'
+import WeatherItem from '../../../model/weathermodel/WeatherItem'
 
 @Component
 export default struct TopNavBar {
@@ -38,5 +38,4 @@ export default struct TopNavBar {
       .height(CommonConstants.TOPIC_HEIGHT)
       .padding({ left: 16, right: 16 })
     }
-
 }

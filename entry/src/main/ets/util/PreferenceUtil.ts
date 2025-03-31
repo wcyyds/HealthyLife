@@ -8,8 +8,6 @@ class City{
     this.name = name
     this.id = id
   }
-
-
 }
 class PreferencesUtil {
   prefMap: Map<string, preferences.Preferences> = new Map()
