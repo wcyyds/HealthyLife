@@ -1,0 +1,57 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "card_background",
+      "value": "#4D000000"
+    },
+    {
+      "name": "text_fontcolor",
+      "value": "#FFC0CBD8"
+    },
+    {
+      "name": "text_fontcolor_gray",
+      "value": "#FF8D8D8F"
+    },
+
+    {
+      "name": "rainy_backgroundcolor",
+      "value": "#FF606060"
+    },
+    {
+      "name": "snowy_backgroundcolor",
+      "value": "#FFDED8D8"
+    },
+    {
+      "name": "default_backgroundcolor",
+      "value": "#ff2ca3e2"
+    },
+    {
+      "name": "button_background",
+      "value": "#F87B31"
+    },
+    {
+      "name": "input_text_font",
+      "value": "#F87B31"
+    },
+    {
+      "name": "button_font",
+      "value":"#182431"
+    },
+    {
+      "name": "step_text_font",
+      "value":"#182431"
+    },
+    {
+      "name": "steps_text_font",
+      "value":"#99182431"
+    },
+    {
+      "name": "divider",
+      "value":"#33182431"
+    }
+  ]
+}

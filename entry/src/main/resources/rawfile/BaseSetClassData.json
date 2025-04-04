@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "1",
+    "title" : "蓝牙",
+    "image" : "app.media.power_off",
+    "state" : "关闭蓝牙",
+    "url" : ""
+  },
+  {
+    "id" : "2",
+    "title" : "WiFi",
+    "image" : "app.media.power_on",
+    "state" : "关闭WiFi",
+    "url" : ""
+  },
+  {
+    "id" : "3",
+    "title" : "流量",
+    "image" : "",
+    "state" : "关闭流量",
+    "url" : "s"
+  },
+  {
+    "id" : "4",
+    "title" : "GPS",
+    "image" : "",
+    "state" : "关闭GPS",
+    "url" : ""
+  }
+]
