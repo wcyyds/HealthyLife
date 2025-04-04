@@ -22,19 +22,19 @@ class Logger {
   }
 
   debug(...args: string[]): void {
-    hilog.debug(this.domain, this.prefix, this.format, 'weather_forecast ' +  args);
+    hilog.debug(this.domain, this.prefix, this.format, 'HealthyLife ' +  args);
   }
 
   info(...args: string[]): void {
-    hilog.info(this.domain, this.prefix, this.format, 'weather_forecast ' + args);
+    hilog.info(this.domain, this.prefix, this.format, 'HealthyLife ' + args);
   }
 
   warn(...args: string[]): void {
-    hilog.warn(this.domain, this.prefix, this.format, 'weather_forecast ' +  args);
+    hilog.warn(this.domain, this.prefix, this.format, 'HealthyLife ' +  args);
   }
 
   error(...args: string[]): void {
-    hilog.error(this.domain, this.prefix, this.format,'weather_forecast ' +  args);
+    hilog.error(this.domain, this.prefix, this.format,'HealthyLife ' +  args);
   }
 }
 

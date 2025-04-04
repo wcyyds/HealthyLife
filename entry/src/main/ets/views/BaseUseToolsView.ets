@@ -1,4 +1,4 @@
-import { BaseUseToolsClass } from "../model/BaseUseToolsClass"
+import { BaseUseToolsClass } from "../model/baseusertoolsmodel/BaseUseToolsClass"
 import { router } from "@kit.ArkUI"
 
 @Component

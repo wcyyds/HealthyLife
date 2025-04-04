@@ -1,3 +1,9 @@
+import { common, wantAgent } from "@kit.AbilityKit";
+import { backgroundTaskManager } from "@kit.BackgroundTasksKit";
+import Logger from "./Logger";
+
+const TAG = 'Steps Utils';
+
 export default  class BackgroundUtil {
 
   static getBackgroundImage(weatherCondition: string): Resource {
@@ -22,5 +28,55 @@ export default  class BackgroundUtil {
         return $r('app.media.default_background');
     }
   }
+
+  /**
+   * Start background task.
+   *
+   * @param context
+   */
+  public static startContinuousTask(context: common.UIAbilityContext): void {
+    let wantAgentInfo: wantAgent.WantAgentInfo = {
+      wants: [
+        {
+          bundleName: context.abilityInfo.bundleName,
+          abilityName: context.abilityInfo.name
+        }
+      ],
+      operationType: wantAgent.OperationType.START_ABILITY,
+      requestCode: 0,
+      wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+    };
+
+    wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj) => {
+      try {
+        backgroundTaskManager.startBackgroundRunning(context,
+          backgroundTaskManager.BackgroundMode.LOCATION, wantAgentObj).then(() => {
+          Logger.info(TAG, 'startBackgroundRunning succeeded');
+        }).catch((err: Error) => {
+          Logger.error(TAG, `startBackgroundRunning failed Cause:  ${JSON.stringify(err)}`);
+        });
+      } catch (error) {
+        Logger.error(TAG, `stopBackgroundRunning failed. error: ${JSON.stringify(error)} `);
+      }
+    });
+  }
+
+  /**
+   * Stop background task.
+   *
+   * @param context
+   */
+  public static stopContinuousTask(context: common.UIAbilityContext): void {
+    try {
+      backgroundTaskManager.stopBackgroundRunning(context).then(() => {
+        Logger.info(TAG, 'stopBackgroundRunning succeeded');
+      }).catch((err: Error) => {
+        Logger.error(TAG, `stopBackgroundRunning failed Cause:  ${JSON.stringify(err)}`);
+      });
+    } catch (error) {
+      Logger.error(TAG, `stopBackgroundRunning failed. error: ${JSON.stringify(error)} `);
+    }
+  }
+
 }
 

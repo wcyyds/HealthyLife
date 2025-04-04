@@ -1,4 +1,4 @@
-import { BaseSetClass } from "../../model/BaseSetClass";
+import { BaseSetClass } from "../../model/baseusertoolsmodel/BaseSetClass";
 import { bufferToString } from "../../util/BufferUtil";
 
 @Entry
@@ -19,29 +19,6 @@ struct SetPage {
 
   build() {
     Column() {
-      Row() {
-        Text('nihao')
-          .id('SetPageHelloWorld')
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-          .backgroundColor('#000000')
-        Text('nihao')
-          .id('SetPageHelloWorld')
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-        Toggle({type:ToggleType.Switch, isOn: false})
-          .selectedColor('#007DFF')
-          .switchPointColor('#ffffffff')
-          .switchStyle({
-            pointRadius: 20,
-            trackBorderRadius: 20,
-            pointColor: '#ffb3b3b3'
-          })
-          .onChange((isOn: boolean) => {
-            console.info(this.TAG,'Component status:' + isOn)
-          })
-      }
-
       Grid() {
         ForEach(this.baseUseToolsList, (item: BaseSetClass) => {
           GridItem() {
@@ -57,7 +34,6 @@ struct SetPage {
       .scrollBar(BarState.Off)
       .height(400)
       .padding({ top: 0, left: 16, right: 16, bottom: 32 })
-      .backgroundColor('#ffffbbbb')
       .height('100%')
       .width('100%')
     }
@@ -72,9 +48,19 @@ export struct BaseSetItem {
   build() {
     Column() {
       Row(){
-        Image($r(this.baseSetItem.image))
-          .width('50%')
-          .borderRadius(16)
+        Toggle({type:ToggleType.Switch, isOn: false})
+          .selectedColor('#007DFF')
+          .switchPointColor('#ffffffff')
+          .switchStyle({
+            pointRadius: 20,
+            trackBorderRadius: 40,
+            pointColor: '#ffffffff'
+          })
+          .onChange((isOn: boolean) => {
+
+          })
+          .width(80)
+          .height(40)
         Text(this.baseSetItem.title)
           .width('50%')
           .fontSize(16)

@@ -1,4 +1,4 @@
-import { BaseUseToolsClass } from "../model/BaseUseToolsClass"
+import { BaseUseToolsClass } from "../model/baseusertoolsmodel/BaseUseToolsClass"
 import { bufferToString } from "../util/BufferUtil"
 import { BaseUseToolItem } from "../views/BaseUseToolsView"
 import { abilityAccessCtrl } from "@kit.AbilityKit"

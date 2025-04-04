@@ -5,6 +5,7 @@
     "subpage/baseusetoolspages/SetPage",
     "subpage/baseusetoolspages/ClockPage",
     "subpage/weatherpages/CityManage",
-    "subpage/newspages/NewsDetail"
+    "subpage/newspages/NewsDetail",
+    "subpage/baseusetoolspages/PedometerPage"
   ]
 }
