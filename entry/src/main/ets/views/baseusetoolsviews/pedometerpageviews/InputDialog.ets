@@ -62,7 +62,7 @@ export default struct InputDialog {
         Text($r('app.string.cancel'))
           .width($r('app.float.text_width'))
           .height($r('app.float.text_height'))
-          .fontColor($r('app.color.input_text_font'))
+          .fontColor('#0A59F7')
           .fontWeight(CommonConstants.BIG_FONT_WEIGHT)
           .fontSize($r('app.float.text_font_size'))
           .textAlign(TextAlign.Center)
@@ -85,12 +85,11 @@ export default struct InputDialog {
         Text($r('app.string.confirm'))
           .width($r('app.float.text_width'))
           .height($r('app.float.text_height'))
-          .fontColor($r('app.color.input_text_font'))
           .fontWeight(CommonConstants.BIG_FONT_WEIGHT)
           .fontSize($r('app.float.text_font_size'))
           .textAlign(TextAlign.Center)
           .margin({ left: $r('app.float.text_margin_left') })
-          .fontColor($r('app.color.input_text_font'))
+          .fontColor('#0A59F7')
           .onClick(() => {
             if(this.controller) {
               this.controller.close();

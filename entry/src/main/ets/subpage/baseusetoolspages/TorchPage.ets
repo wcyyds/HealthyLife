@@ -5,24 +5,32 @@ import { common } from '@kit.AbilityKit';
 @Entry
 @Component
 struct TorchPage {
-  @State message: string = 'Hello World';
+  @State imageTorch: string = 'app.media.torch_close';
 
   build() {
     Column() {
-
+      Image($r(this.imageTorch))
+        .width('100%')
+        .height('70%%')
       Button('打开手电筒', { stateEffect: true, type: ButtonType.Capsule })
         .width('80%')
         .height(40)
         .margin(20)
         .onClick(() => {
-          camera.getCameraManager(getContext() as common.UIAbilityContext).setTorchMode(1);
+          if(isTorchSupported(camera.getCameraManager(getContext() as common.UIAbilityContext))){
+            camera.getCameraManager(getContext() as common.UIAbilityContext).setTorchMode(1);
+          }
+          this.imageTorch = 'app.media.torch_open'
         })
       Button('关闭手电筒', { stateEffect: true, type: ButtonType.Capsule })
         .width('80%')
         .height(40)
         .margin(20)
         .onClick(() => {
-          camera.getCameraManager(getContext() as common.UIAbilityContext).setTorchMode(0);
+          if(isTorchSupported(camera.getCameraManager(getContext() as common.UIAbilityContext))){
+            camera.getCameraManager(getContext() as common.UIAbilityContext).setTorchMode(1);
+          }
+          this.imageTorch = 'app.media.torch_close'
         })
     }
     .height('100%')

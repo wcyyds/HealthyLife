@@ -19,28 +19,39 @@ export struct BaseUseToolsPage{
   }
 
   build() {
-    Column(){
-      Text('基础使用')
-        .fontColor('#182431')
-        .fontSize(16)
-        .fontWeight(500)
-        .fontFamily('HarmonyHeiTi-medium')
-        .textAlign(TextAlign.Start)
-        .padding({ left: 16, right: 16 })
+    Stack({ alignContent: Alignment.BottomEnd }){
+      Column(){
+        Text('基础使用')
+          .fontColor('#182431')
+          .fontSize(25)
+          .fontWeight(500)
+          .fontFamily('HarmonyHeiTi-medium')
+          .textAlign(TextAlign.Start)
+          .padding({ left: 16, right: 16 })
+          .width('100%')
+          .margin({bottom: 8})
+        Grid() {
+          ForEach(this.baseUseToolsList, (item: BaseUseToolsClass) => {
+            GridItem() {
+              BaseUseToolItem({ baseUseToolItem: item })
+                .onClick(() => {
+                  console.info(this.TAG, '基础工具点击')
+                })
+            }
+            .width('50%')
+            .aspectRatio(1)
+          }, (item: BaseUseToolsClass) => item.id)
+        }
+        .columnsTemplate('1fr 1fr')
+        .columnsGap('8vp')
+        .rowsGap('12vp')
         .width('100%')
-      List({ space: 12 }) {
-        ForEach(this.baseUseToolsList, (item: BaseUseToolsClass) => {
-          ListItem() {
-            BaseUseToolItem({ baseUseToolItem: item })
-              .onClick(() => {
-                console.info(this.TAG, '基础工具点击')
-              })
-          }
-        }, (item: BaseUseToolsClass) => item.id)
+        .height('100%')
       }
-      .scrollBar(BarState.Off)
-      .padding({ left: 16, right: 16 })
+      .width('100%')
+      .height('100%')
     }
-    .margin({ top: 18 })
+    .width('100%')
+    .height('100%')
   }
 }

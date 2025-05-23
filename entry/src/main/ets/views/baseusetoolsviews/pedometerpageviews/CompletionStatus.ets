@@ -83,7 +83,7 @@ export struct CompletionStatus {
           })
       }
       .width(CommonConstants.FULL_WIDTH)
-      .backgroundImage($r('app.media.ic_orange'))
+      .backgroundColor('#0A59F7')
 
       Row() {
         Text(this.progressValue.toString())

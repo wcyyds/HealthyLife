@@ -1,9 +1,18 @@
-import { abilityAccessCtrl, AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { abilityAccessCtrl, AbilityConstant, UIAbility, Want, common, PermissionRequestResult, Permissions} from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { calendarManager } from '@kit.CalendarKit';
+import { notificationManager } from '@kit.NotificationKit';
+
+export let calendarMgr: calendarManager.CalendarManager | null = null;
+
+export let mContext: common.UIAbilityContext | null = null;
+
+export let TAG: string = '**EntryAbility'
 
 export default class EntryAbility extends UIAbility {
+
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
     let atManager = abilityAccessCtrl.createAtManager();
@@ -36,6 +45,37 @@ export default class EntryAbility extends UIAbility {
       }
       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content.');
     });
+
+    // 获取日历管理对象
+    mContext = this.context;
+    const permissions: Permissions[] = ['ohos.permission.READ_CALENDAR', 'ohos.permission.WRITE_CALENDAR'];
+    let atManager = abilityAccessCtrl.createAtManager();
+    atManager.requestPermissionsFromUser(mContext, permissions).then((result: PermissionRequestResult) => {
+      console.log(`get Permission success, result: ${JSON.stringify(result)}`);
+      calendarMgr = calendarManager.getCalendarManager(mContext);
+    }).catch((error: BusinessError) => {
+      console.error(`get Permission error, error. Code: ${error.code}, message: ${error.message}`);
+    })
+
+
+    const DOMAIN_NUMBER: number = 0xFF00;
+    notificationManager.isNotificationEnabled().then((data: boolean) => {
+      hilog.info(DOMAIN_NUMBER, TAG, "isNotificationEnabled success, data: " + JSON.stringify(data));
+      if(!data){
+        notificationManager.requestEnableNotification(mContext).then(() => {
+          hilog.info(DOMAIN_NUMBER, TAG, `[ANS] requestEnableNotification success`);
+        }).catch((err : BusinessError) => {
+          if(1600004 == err.code){
+            hilog.error(DOMAIN_NUMBER, TAG, `[ANS] requestEnableNotification refused, code is ${err.code}, message is ${err.message}`);
+          } else {
+            hilog.error(DOMAIN_NUMBER, TAG, `[ANS] requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
+          }
+        });
+      }
+    }).catch((err : BusinessError) => {
+      hilog.error(DOMAIN_NUMBER, TAG, `isNotificationEnabled fail, code is ${err.code}, message is ${err.message}`);
+    });
+
   }
 
   onWindowStageDestroy(): void {

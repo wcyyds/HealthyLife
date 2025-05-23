@@ -7,38 +7,32 @@ export struct BaseUseToolItem{
   @Prop baseUseToolItem: BaseUseToolsClass
 
   build() {
-    Row() {
+    Stack({ alignContent: Alignment.Center }) {
+      Image($r(this.baseUseToolItem.image))
+        .height('100%')
+        .width('100%')
+        .borderRadius(16)
+
       Column() {
         Text(this.baseUseToolItem.title)
-          .height(19)
-          .width('100%')
-          .fontSize(14)
-          .textAlign(TextAlign.Start)
-          .textOverflow({ overflow: TextOverflow.Ellipsis })
+          .fontSize(30)
+          .textAlign(TextAlign.Center)
           .maxLines(1)
-          .fontWeight(400)
-          .margin({ top: 4 })
-        Button('跳转页面')
-          .onClick(() => {
-            router.pushUrl({url: this.baseUseToolItem.url})
-          })
+          .fontColor('#ff000000')
+          .backgroundColor('#ffffffff')
+          .fontWeight(600)
+          .margin({ top: 150 })
       }
       .height('100%')
       .layoutWeight(1)
-      .alignItems(HorizontalAlign.Start)
+      .alignItems(HorizontalAlign.End)
       .margin({ right: 12 })
-
-      Image($r(this.baseUseToolItem.image))
-        .objectFit(ImageFit.Cover)
-        .height(64)
-        .width(108)
-        .borderRadius(16)
+      .onClick(() => {
+        router.pushUrl({url: this.baseUseToolItem.url})
+      })
     }
     .width('100%')
-    .height(88)
+    .height('100%')
     .borderRadius(16)
-    .backgroundColor(Color.White)
-    .padding(12)
-    .alignItems(VerticalAlign.Top)
   }
 }

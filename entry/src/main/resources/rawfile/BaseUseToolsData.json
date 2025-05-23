@@ -2,38 +2,38 @@
   {
     "id" : "1",
     "title" : "手电筒",
-    "image" : "",
+    "image" : "app.media.tool_torch",
     "url" : "subpage/baseusetoolspages/TorchPage"
   },
   {
     "id" : "2",
     "title" : "基础设置",
-    "image" : "",
+    "image" : "app.media.tool_set",
     "url" : "subpage/baseusetoolspages/SetPage"
   },
   {
     "id" : "3",
     "title" : "闹钟设置",
-    "image" : "",
+    "image" : "app.media.tool_clock",
     "url" : "subpage/baseusetoolspages/ClockPage"
   },
   {
     "id" : "4",
     "title" : "计步功能",
-    "image" : "",
+    "image" : "app.media.tool_pedometer",
     "url" : "subpage/baseusetoolspages/PedometerPage"
   },
   {
     "id" : "5",
     "title" : "吃药提醒",
-    "image" : "",
-    "url" : ""
+    "image" : "app.media.tool_medicine",
+    "url" : "subpage/baseusetoolspages/MedicinePage"
   },
   {
     "id" : "6",
-    "title" : "待定",
-    "image" : "",
-    "url" : ""
+    "title" : "小智助手",
+    "image" : "app.media.tool_robot",
+    "url" : "subpage/baseusetoolspages/TalkRobotPage"
   },
   {
     "id" : "7",

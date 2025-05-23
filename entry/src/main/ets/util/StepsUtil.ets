@@ -24,6 +24,7 @@ const PREFERENCES_NAME = 'myPreferences';
 
 /**
  * Steps util function.
+ * 步骤功能
  */
 export class StepsUtil {
   createStepsPreferences(context: common.UIAbilityContext) {
@@ -33,6 +34,7 @@ export class StepsUtil {
 
   /**
    * Get the progress value.
+   * 获取进度值
    *
    * @param {number} setSteps
    * @param {number} currentSteps
@@ -48,6 +50,7 @@ export class StepsUtil {
 
   /**
    * Put preferences value.
+   * 放置首选项值
    *
    * @param {string} key
    * @param {string} value
@@ -66,6 +69,7 @@ export class StepsUtil {
 
   /**
    * Get preferences value.
+   * 获取首选项值
    *
    * @param {number} setSteps
    * @param {Function} callback
@@ -82,6 +86,7 @@ export class StepsUtil {
 
   /**
    * Clean steps data.
+   * 清楚步骤数据
    */
   CleanStepsData(): void {
     this.putStorageValue(CommonConstants.OLD_STEPS, '');

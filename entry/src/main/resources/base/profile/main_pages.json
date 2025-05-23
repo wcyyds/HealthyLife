@@ -6,6 +6,9 @@
     "subpage/baseusetoolspages/ClockPage",
     "subpage/weatherpages/CityManage",
     "subpage/newspages/NewsDetail",
-    "subpage/baseusetoolspages/PedometerPage"
+    "subpage/baseusetoolspages/PedometerPage",
+    "subpage/baseusetoolspages/MedicinePage",
+    "subpage/baseusetoolspages/CalendarPage",
+    "subpage/baseusetoolspages/TalkRobotPage"
   ]
 }

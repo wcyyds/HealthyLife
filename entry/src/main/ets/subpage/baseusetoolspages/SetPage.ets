@@ -29,7 +29,7 @@ struct SetPage {
           }
         }, (item: BaseSetClass) => item.id)
       }
-      .columnsTemplate('1fr 1fr')
+      .columnsTemplate('1fr')
       .columnsGap(8)
       .scrollBar(BarState.Off)
       .height(400)
@@ -40,7 +40,6 @@ struct SetPage {
   }
 }
 
-@Preview
 @Component
 export struct BaseSetItem {
   @Prop baseSetItem: BaseSetClass;
@@ -59,19 +58,13 @@ export struct BaseSetItem {
           .onChange((isOn: boolean) => {
 
           })
-          .width(80)
-          .height(40)
-        Text(this.baseSetItem.title)
-          .width('50%')
-          .fontSize(16)
-          .maxLines(1)
-          .fontWeight(400)
-          .textAlign(TextAlign.End)
+          .width(120)
+          .height(60)
       }
       .justifyContent(FlexAlign.SpaceBetween)
       Text(this.baseSetItem.title)
         .width('100%')
-        .fontSize(20)
+        .fontSize(40)
         .textAlign(TextAlign.Center)
         .fontWeight(400)
         .maxLines(1)
@@ -83,7 +76,7 @@ export struct BaseSetItem {
     .borderRadius(16)
     .margin({top: 16})
     .padding({top: 10, bottom: 10, left: 10, right: 10})
-    .backgroundColor(Color.White)
+    .backgroundColor('#ffd4d4d4')
   }
 }
 

@@ -14,7 +14,7 @@
     },
     {
       "name": "start_font_size",
-      "value": "16fp"
+      "value": "35fp"
     },
     {
       "name": "start_position_height",
@@ -42,11 +42,11 @@
     },
     {
       "name": "target_button_height",
-      "value": "30vp"
+      "value": "50vp"
     },
     {
       "name": "target_button_width",
-      "value": "96vp"
+      "value": "200vp"
     },
     {
       "name": "target_button_radius",
@@ -54,7 +54,7 @@
     },
     {
       "name": "target_button_font",
-      "value": "16fp"
+      "value": "30fp"
     },
     {
       "name": "target_margin_top",
@@ -90,7 +90,7 @@
     },
     {
       "name": "walling_text_font",
-      "value": "20fp"
+      "value": "30fp"
     },
     {
       "name": "walling_margin_top",
@@ -106,7 +106,7 @@
     },
     {
       "name": "description_text_width",
-      "value": "80vp"
+      "value": "160vp"
     },
     {
       "name": "description_text_height",
@@ -114,11 +114,11 @@
     },
     {
       "name": "record_steps_font",
-      "value": "20fp"
+      "value": "40fp"
     },
     {
       "name": "current_steps_font",
-      "value": "16fp"
+      "value": "30fp"
     },
     {
       "name": "current_row_height",
@@ -146,7 +146,7 @@
     },
     {
       "name": "start_position_font",
-      "value": "16fp"
+      "value": "30fp"
     },
     {
       "name": "display_text_width",
@@ -158,7 +158,7 @@
     },
     {
       "name": "position_font_size",
-      "value": "20fp"
+      "value": "40fp"
     },
     {
       "name": "position_margin_top",
@@ -174,11 +174,11 @@
     },
     {
       "name": "location_font_size",
-      "value": "16fp"
+      "value": "30fp"
     },
     {
       "name": "current_font_size",
-      "value": "20fp"
+      "value": "40fp"
     },
     {
       "name": "current_location_height",

@@ -28,6 +28,8 @@ struct PedometerPage {
   @State progressValue: number = 0;
   @State isStart: boolean = false;
   private context: common.UIAbilityContext = getContext(this) as common.UIAbilityContext;
+
+  // 传感器回调
   private sensorCallback: (data: sensor.PedometerResponse) => void = (data: sensor.PedometerResponse) => {
     try {
       if (this.isStart) {
@@ -52,6 +54,8 @@ struct PedometerPage {
       Logger.error(TAG, 'Sensor on err' + JSON.stringify(err));
     }
   }
+
+  // 获取位置信息
   private getGeolocation: (location: geoLocationManager.Location) => void = (location: geoLocationManager.Location) => {
     if (this.latitude === location.latitude && this.longitude === location.longitude) {
       return;
@@ -126,6 +130,7 @@ struct PedometerPage {
     });
   }
 
+  // 请求权限
   requestPermissions(): void {
     let atManager = abilityAccessCtrl.createAtManager();
     try {
@@ -167,7 +172,7 @@ struct PedometerPage {
           .width($r('app.float.start_button_width'))
           .height($r('app.float.start_button_height'))
           .borderRadius($r('app.float.start_button_radius'))
-          .backgroundColor($r('app.color.button_background'))
+          .backgroundColor('#0A59F7')
           .fontSize($r('app.float.start_font_size'))
           .fontColor(Color.White)
           .fontWeight(CommonConstants.BIG_FONT_WEIGHT)
