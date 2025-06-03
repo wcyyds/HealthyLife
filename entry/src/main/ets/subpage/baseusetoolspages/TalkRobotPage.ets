@@ -17,7 +17,7 @@ struct TalkRobotPage {
   }
 
   getAnswer() {
-    console.info("wcy", "start getTextToSpeechGet")
+    console.info("wcy", "start getTextTo")
     let httpRequest = http.createHttp();
     httpRequest.request(
       // 填写HTTP请求的URL地址，可以带参数也可以不带参数。URL地址需要开发者自定义。请求的参数可以在extraData中指定
@@ -51,7 +51,10 @@ struct TalkRobotPage {
       MsgIn.content = this.MsgResult.content
       MsgIn.id = MsgReturn.choices[0].index.toString()
       this.MsgArray.push(MsgIn)
-    });
+    })
+      .catch((err: Error)=>{
+        console.info("wcy", "getTextToSpeechGet err: " + err.message)
+      });
   }
 
   build() {

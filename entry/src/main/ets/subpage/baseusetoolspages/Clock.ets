@@ -31,6 +31,7 @@ import Logger from '../../util/Logger'
 
 const TAG: string = 'Clock'
 
+@Entry
 @Component
 export struct Clock {
 

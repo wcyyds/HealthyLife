@@ -28,6 +28,7 @@ struct ClockPage {
     this.getSize()
   }
 
+  //弧度到时钟的变化
   radianToClockTime(radian: number) : string{
     // 一个完整的圆是 2π 弧度，对应 12 小时
     const totalHours = 12;
@@ -42,8 +43,6 @@ struct ClockPage {
     const formattedMinutes = minutes.toString().padStart(2, '0');
     this.currentHour = wholeHours
     this.currentMinute = minutes
-
-    Logger.info(TAG + " movePosition", `time = ${formattedHours}:${formattedMinutes}`)
     return formattedHours + ':' + formattedMinutes
   }
 
@@ -68,8 +67,6 @@ struct ClockPage {
                 let vx = x - this.canvasWidth / 2
                 let vy = y - this.canvasWidth * 0.7 / 2
                 let angle = -Math.atan2(vx, vy)
-                Logger.info(TAG + " movePosition", `angle = ${angle}`)
-                Logger.info(TAG + " movePosition", `angle + Math.PI = ${angle + Math.PI}`)
                 this.currentTime = this.radianToClockTime(angle + Math.PI * 1)
                 break
             }

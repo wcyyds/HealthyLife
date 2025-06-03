@@ -212,10 +212,7 @@ function getTextToSpeechGet() {
     console.info("wcy", "getTextToSpeechGet res: " + res.result.toString())
     console.info("wcy", "getTextToSpeechGet taskList: " + taskList[0])
     let baseData = JSON.parse(res.result.toString()) as BaseTextToSpeechGetClass
-    // if(baseData.tasks_info[0].task_status == "Running"){
-    //   getTextToSpeechGet()
-    // }
-    avPlayerLiveDemo()
+    avPlayerLive()
   });
 }
 
@@ -237,8 +234,8 @@ class BaseTextToSpeechGetResultTasksInfoTaskResultClass {
   speech_url: string = ""
 }
 
-// 以下demo为通过url设置网络地址来实现播放直播码流的demo
-async function avPlayerLiveDemo() {
+// 通过url设置网络地址来实现播放
+async function avPlayerLive() {
   // 创建avPlayer实例对象
   let avPlayer: media.AVPlayer = await media.createAVPlayer();
   // 创建状态机变化回调函数

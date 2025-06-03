@@ -38,7 +38,7 @@ struct TorchPage {
   }
 }
 
-//TODO:检测设备手电筒功能是否可用,若不可用则弹出弹窗
+//检测设备手电筒功能是否可用
 function isTorchSupported(cameraManager: camera.CameraManager): boolean {
   let torchSupport: boolean = false;
   try {
